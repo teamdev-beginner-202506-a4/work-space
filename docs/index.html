@@ -6,8 +6,45 @@
   <link href="./output.css" rel="stylesheet">
 </head>
 <body>
-  <header>
-    ヘッダー
+  <header class="w-full">
+    <div class="flex flex-row items-center h-14 px-4 justify-between lg:justify-start">
+        <!-- ロゴ -->
+        <a class="text-xl" href="index.html">Cafe Recursion</a>
+
+        <!-- デスクトップメニュー（lg以上で表示） -->
+        <div class="hidden lg:block">
+          <div class="ml-4 flex flex-row items-baseline space-x-2">
+              <a class="px-3 py-2 rounded-md text-sm font-medium" href="#">Home</a>
+              <a class="px-3 py-2 rounded-md text-sm font-medium" href="drink.html">Drink</a>
+              <a class="px-3 py-2 rounded-md text-sm font-medium" href="sweets.html">Sweets</a>
+              <a class="px-3 py-2 rounded-md text-sm font-medium" href="food.html">Food</a>
+              <a class="px-3 py-2 rounded-md text-sm font-medium" href="information.html">Information</a>
+          </div>
+        </div>
+
+        <!-- モバイルトグルボタン（lg未満で表示） -->
+        <button id="mobile-menu-toggle" class="lg:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500" type="button">
+          <!-- ハンバーガーアイコン -->
+          <svg id="hamburger-icon" class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <!-- クローズアイコン -->
+          <svg id="close-icon" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+    </div>
+
+    <!-- モバイルメニュー（トグルで表示/非表示） -->
+    <div id="mobile-menu" class="lg:hidden hidden absolute bg-gray-200 w-full">
+        <div class="px-2 pt-2 pb-3 space-y-1 border-t border-gray-200">
+          <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium">Home</a>
+          <a href="drink.html" class="block px-3 py-2 rounded-md text-base font-medium">Drink</a>
+          <a href="sweets.html" class="block px-3 py-2 rounded-md text-base font-medium">Sweets</a>
+          <a href="food.html" class="block px-3 py-2 rounded-md text-base font-medium">Food</a>
+          <a href="information.html" class="block px-3 py-2 rounded-md text-base font-medium">Information</a>
+        </div>
+    </div>
   </header>
   <div class="slider">
     スライダー
@@ -22,4 +59,47 @@
     フッター
   </footer>
 </body>
+<script>
+// モバイルメニューの切り替え機能
+document.addEventListener('DOMContentLoaded', function() {
+  const toggleButton = document.getElementById('mobile-menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const hamburgerIcon = document.getElementById('hamburger-icon');
+  const closeIcon = document.getElementById('close-icon');
+
+    // メニューを閉じる関数
+  function closeMobileMenu() {
+    mobileMenu.classList.add('hidden');
+    hamburgerIcon.classList.remove('hidden');
+    hamburgerIcon.classList.add('block');
+    closeIcon.classList.add('hidden');
+    closeIcon.classList.remove('block');
+  }
+
+  if (toggleButton && mobileMenu && hamburgerIcon && closeIcon) {
+    toggleButton.addEventListener('click', function() {
+      // メニューの表示/非表示を切り替え
+      mobileMenu.classList.toggle('hidden');
+      
+      // アイコンの切り替え
+      hamburgerIcon.classList.toggle('hidden');
+      hamburgerIcon.classList.toggle('block');
+      closeIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('block');
+    });
+
+    // メニュー外をクリックした時にメニューを閉じる
+    document.addEventListener('click', function(event) {
+      if (!toggleButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+        closeMobileMenu();
+      }
+    });
+
+    // 画面サイズ変更時にモバイルメニューをリセット
+    window.addEventListener('resize', function() {
+      closeMobileMenu();
+    });
+  }
+});
+</script>
 </html>
