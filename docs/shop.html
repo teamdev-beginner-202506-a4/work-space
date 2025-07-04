@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+  <title>Shop - Cafe Recursion</title>
+  <link href="./output.css" rel="stylesheet">
+</head>
+<body class="h-screen flex flex-col relative">
+  <header>
+    ヘッダー
+  </header>
+  <main class="flex flex-1 w-full justify-center">
+    <div class="flex flex-col items-center sm:w-3/4 w-full h-full space-y-2">
+      <div class="flex flex-col items-center font-handwriting py-5 space-y-2">
+        <h1 class="font-handwriting text-4xl">Shop Information</h1>
+        <h2>店舗情報</h2>
+      </div>
+
+      <!-- イメージ画像 -->
+      <img src="./images/coffee.jpg" alt="Cafe Recursion" class="w-1/2 max-w-60 h-auto">
+
+      <!-- 店舗情報 -->
+      <div class="py-5 flex flex-col items-center w-fit sm:w-full">
+        <table >
+          <tbody class="text-gray-600">
+            <tr>
+              <th class="w-1/4 font-medium text-lg">住所</th>
+              <td >〒100-0005 東京都千代田区丸の内１丁目</td>
+            </tr>
+            <tr>
+              <th class="font-medium text-lg">電話番号</th>
+              <td>xxx-0000-zzz</td>
+            </tr>
+            <tr>
+              <th class="font-medium text-lg">アクセス</th>
+              <td>東京駅丸の内口徒歩5分, 日本橋駅徒歩3分</td>
+            </tr>
+            <tr>
+              <th class="font-medium text-lg">定休日</th>
+              <td>火曜日, 水曜日</td>
+            </tr>
+            <tr>
+              <th class="font-medium text-lg">営業時間</th>
+              <td>11:00 ~ 19:00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- GoogleMapで店舗の座標を表示 -->
+      <div class="py-5">
+        <iframe title ="Cafe Recursionの地図" src="https://maps.google.co.jp/maps?output=embed&q=35.6797122,139.7695084" width="300" height="350"></iframe>
+      </div>
+    </div>
+  </main>
+  <footer class="w-full">
+    <div class="text-right mb-2 px-2">© 2025 Cafe Recursion. All Rights Reserved.</div>
+  </footer>
+</body>
+</html>
