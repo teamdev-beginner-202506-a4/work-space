@@ -15,7 +15,9 @@ document.addEventListener('DOMContentLoaded', function() {
     closeIcon.classList.remove('block');
   }
 
-  if (toggleButton && mobileMenu && hamburgerIcon && closeIcon) {
+  const showMobileHeader = toggleButton && mobileMenu && hamburgerIcon && closeIcon;
+
+  if (showMobileHeader) {
     toggleButton.addEventListener('click', function() {
       // メニューの表示/非表示を切り替え
       mobileMenu.classList.toggle('hidden');
