@@ -298,27 +298,6 @@
   .bg-gray-200 {
     background-color: var(--color-gray-200);
   }
-  .bg-\[url\(\.\/images\/fruit-cake\.jpg\)\] {
-    background-image: url(./images/fruit-cake.jpg);
-  }
-  .bg-\[url\(\.\/images\/rainbow-cake\.jpg\)\] {
-    background-image: url(./images/rainbow-cake.jpg);
-  }
-  .bg-\[url\(\.\/images\/short-cake\.jpg\)\] {
-    background-image: url(./images/short-cake.jpg);
-  }
-  .bg-\[url\(\.\/images\/strawberry-cake\.jpg\)\] {
-    background-image: url(./images/strawberry-cake.jpg);
-  }
-  .bg-cover {
-    background-size: cover;
-  }
-  .bg-center {
-    background-position: center;
-  }
-  .bg-no-repeat {
-    background-repeat: no-repeat;
-  }
   .object-cover {
     object-fit: cover;
   }
