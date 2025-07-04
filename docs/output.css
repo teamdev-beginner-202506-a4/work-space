@@ -430,9 +430,24 @@
       outline-style: none;
     }
   }
+  .sm\:block {
+    @media (width >= 40rem) {
+      display: block;
+    }
+  }
+  .sm\:hidden {
+    @media (width >= 40rem) {
+      display: none;
+    }
+  }
   .sm\:h-\[350px\] {
     @media (width >= 40rem) {
       height: 350px;
+    }
+  }
+  .sm\:justify-start {
+    @media (width >= 40rem) {
+      justify-content: flex-start;
     }
   }
   .lg\:block {
