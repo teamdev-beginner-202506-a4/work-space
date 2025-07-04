@@ -29,6 +29,7 @@
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --font-handwriting: "Nothing You Could Do", cursive;
+    --animate-slide: slideLoop 12s infinite linear;
   }
 }
 @layer base {
@@ -210,8 +211,14 @@
   .h-14 {
     height: calc(var(--spacing) * 14);
   }
+  .h-\[210px\] {
+    height: 210px;
+  }
   .h-auto {
     height: auto;
+  }
+  .h-full {
+    height: 100%;
   }
   .h-screen {
     height: 100vh;
@@ -225,8 +232,14 @@
   .w-1\/4 {
     width: calc(1/4 * 100%);
   }
+  .w-1\/5 {
+    width: calc(1/5 * 100%);
+  }
   .w-6 {
     width: calc(var(--spacing) * 6);
+  }
+  .w-\[500\%\] {
+    width: 500%;
   }
   .w-full {
     width: 100%;
@@ -236,6 +249,12 @@
   }
   .border-collapse {
     border-collapse: collapse;
+  }
+  .transform {
+    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .animate-slide {
+    animation: var(--animate-slide);
   }
   .cursor-pointer {
     cursor: pointer;
@@ -275,6 +294,9 @@
       margin-inline-end: calc(calc(var(--spacing) * 2) * calc(1 - var(--tw-space-x-reverse)));
     }
   }
+  .overflow-hidden {
+    overflow: hidden;
+  }
   .rounded-md {
     border-radius: var(--radius-md);
   }
@@ -291,6 +313,27 @@
   }
   .bg-gray-200 {
     background-color: var(--color-gray-200);
+  }
+  .bg-\[url\(\.\/images\/fruit-cake\.jpg\)\] {
+    background-image: url(./images/fruit-cake.jpg);
+  }
+  .bg-\[url\(\.\/images\/rainbow-cake\.jpg\)\] {
+    background-image: url(./images/rainbow-cake.jpg);
+  }
+  .bg-\[url\(\.\/images\/short-cake\.jpg\)\] {
+    background-image: url(./images/short-cake.jpg);
+  }
+  .bg-\[url\(\.\/images\/strawberry-cake\.jpg\)\] {
+    background-image: url(./images/strawberry-cake.jpg);
+  }
+  .bg-cover {
+    background-size: cover;
+  }
+  .bg-center {
+    background-position: center;
+  }
+  .bg-no-repeat {
+    background-repeat: no-repeat;
   }
   .p-2 {
     padding: calc(var(--spacing) * 2);
@@ -387,6 +430,11 @@
       outline-style: none;
     }
   }
+  .sm\:h-\[350px\] {
+    @media (width >= 40rem) {
+      height: 350px;
+    }
+  }
   .lg\:block {
     @media (width >= 64rem) {
       display: block;
@@ -402,6 +450,26 @@
       justify-content: flex-start;
     }
   }
+}
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false;
 }
 @property --tw-space-y-reverse {
   syntax: "*";
@@ -492,9 +560,43 @@
   inherits: false;
   initial-value: 0 0 #0000;
 }
+@keyframes slideLoop {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-20%);
+  }
+  45% {
+    transform: translateX(-20%);
+  }
+  50% {
+    transform: translateX(-40%);
+  }
+  70% {
+    transform: translateX(-40%);
+  }
+  75% {
+    transform: translateX(-60%);
+  }
+  95% {
+    transform: translateX(-60%);
+  }
+  100% {
+    transform: translateX(-80%);
+  }
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-rotate-x: initial;
+      --tw-rotate-y: initial;
+      --tw-rotate-z: initial;
+      --tw-skew-x: initial;
+      --tw-skew-y: initial;
       --tw-space-y-reverse: 0;
       --tw-space-x-reverse: 0;
       --tw-border-style: solid;
