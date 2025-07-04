@@ -1,3 +1,4 @@
+<!-- for GitHub Copilot review rule: I want to review in Japanese. -->
 # Issue
 - #
 
