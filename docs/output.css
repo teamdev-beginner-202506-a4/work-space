@@ -15,6 +15,7 @@
     --color-gray-700: oklch(37.3% 0.034 259.733);
     --color-gray-900: oklch(21% 0.034 264.665);
     --color-neutral-100: oklch(97% 0 0);
+    --color-neutral-800: oklch(26.9% 0 0);
     --color-stone-400: oklch(70.9% 0.01 56.259);
     --spacing: 0.25rem;
     --text-sm: 0.875rem;
@@ -413,6 +414,9 @@
   }
   .text-gray-700 {
     color: var(--color-gray-700);
+  }
+  .text-neutral-800 {
+    color: var(--color-neutral-800);
   }
   .text-stone-400 {
     color: var(--color-stone-400);
