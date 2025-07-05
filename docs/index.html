@@ -8,23 +8,23 @@
 </head>
 <body>
   <header class="w-full font-handwriting">
-    <div class="flex flex-row items-center h-14 px-4 justify-between lg:justify-start">
+    <div class="flex flex-row items-center h-14 px-4 justify-between sm:justify-start">
         <!-- ロゴ -->
         <a class="text-xl" href="./index.html">Cafe Recursion</a>
 
-        <!-- デスクトップメニュー（lg以上で表示） -->
-        <div class="hidden lg:block">
+        <!-- デスクトップメニュー（sm以上で表示） -->
+        <div class="hidden sm:block">
           <div class="ml-4 flex flex-row items-baseline space-x-2">
               <a class="px-3 py-2 rounded-md text-sm font-medium" href="./index.html">Home</a>
               <a class="px-3 py-2 rounded-md text-sm font-medium" href="./drink.html">Drink</a>
               <a class="px-3 py-2 rounded-md text-sm font-medium" href="./sweets.html">Sweets</a>
               <a class="px-3 py-2 rounded-md text-sm font-medium" href="./food.html">Food</a>
-              <a class="px-3 py-2 rounded-md text-sm font-medium" href="./information.html">Information</a>
+              <a class="px-3 py-2 rounded-md text-sm font-medium" href="./shop.html">Shop</a>
           </div>
         </div>
 
-        <!-- モバイルトグルボタン（lg未満で表示） -->
-        <button id="mobile-menu-toggle" class="lg:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer" type="button"  aria-label="Toggle navigation menu" aria-expanded="false">
+        <!-- モバイルトグルボタン（sm未満で表示） -->
+        <button id="mobile-menu-toggle" class="sm:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer" type="button"  aria-label="Toggle navigation menu" aria-expanded="false">
           <!-- ハンバーガーアイコン -->
           <svg id="hamburger-icon" class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -37,13 +37,13 @@
     </div>
 
     <!-- モバイルメニュー（トグルで表示/非表示） -->
-    <div id="mobile-menu" class="lg:hidden hidden absolute bg-gray-200 w-full">
+    <div id="mobile-menu" class="sm:hidden hidden absolute bg-gray-200 w-full z-1">
         <div class="px-2 pt-2 pb-3 space-y-1 border-t border-gray-200">
           <a href="./index.html" class="block px-3 py-2 rounded-md text-base font-medium">Home</a>
           <a href="./drink.html" class="block px-3 py-2 rounded-md text-base font-medium">Drink</a>
           <a href="./sweets.html" class="block px-3 py-2 rounded-md text-base font-medium">Sweets</a>
           <a href="./food.html" class="block px-3 py-2 rounded-md text-base font-medium">Food</a>
-          <a href="./information.html" class="block px-3 py-2 rounded-md text-base font-medium">Information</a>
+          <a href="./shop.html" class="block px-3 py-2 rounded-md text-base font-medium">Shop</a>
         </div>
     </div>
   </header>
