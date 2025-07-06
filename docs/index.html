@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Cafe Recursion</title>
   <link href="./output.css" rel="stylesheet">
   <script src="./js/header.js" defer></script>
 </head>
-<body>
+<body class="min-h-screen flex flex-col">
   <header class="w-full font-handwriting">
     <div class="flex flex-row items-center h-14 px-4 justify-between sm:justify-start">
         <!-- ロゴ -->
@@ -66,14 +67,35 @@
       </div>
     </div>
   </div>
-  <div class="greeting">
-    Welcome to Cafe Recursion
+
+  <div class="flex flex-1 flex-col items-center">
+    <h1 class="greeting font-handwriting text-4xl my-7 text-center text-stone-400">
+      Welcome to Cafe Recursion
+    </h1>
+    <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0">
+      <div class="flex flex-col items-center sm:w-1/2 mx-5 p-4 bg-neutral-100 border border-gray-300 rounded-lg shadow-lg space-y-2">
+        <h2 class="font-handwriting text-3xl">What's new?</h2>
+        <div class="flex items-center space-x-2 h-full">
+          <div class="text-lg text-gray-700">
+            春の新メニュー「フルーツタルト」をご用意しました。新鮮なフルーツと生クリームのハーモニーをお楽しみください。
+          </div>
+          <img src="./images/fruit-tart.jpg" alt="fruit-tart" class="w-1/2 max-w-60 aspect-square object-cover">
+        </div>
+      </div>
+      <div class="flex flex-col items-center sm:w-1/2 mx-5 p-4 bg-neutral-100 border border-gray-300 rounded-lg shadow-lg space-y-2">
+        <h2 class="font-handwriting text-3xl">Recommendation</h2>
+        <div class="flex items-center space-x-2 h-full">
+          <div class="text-lg text-gray-700">
+            今月のお薦めは「ラムダブレンド」。やや苦みのある上品な香りのコーヒーです。
+          </div>
+          <img src="./images/coffee-beans.jpg" alt="fruit-tart" class="w-1/2 max-w-60 aspect-square object-cover">
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="feature">
-    what's new とか recommendationとか
-  </div>
-  <footer>
-    フッター
+  
+  <footer class="w-full mt-7">
+    <div class="text-right mb-2 px-2 text-neutral-800 text-sm">© 2025 Cafe Recursion. All Rights Reserved.</div>
   </footer>
 </body>
 </html>
